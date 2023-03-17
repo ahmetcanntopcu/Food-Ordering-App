@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214A40B629C4F7F400F6C7BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A40B529C4F7F400F6C7BF /* HomeViewController.swift */; };
 		216ACF7629C0BDA600B61044 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ACF7529C0BDA600B61044 /* OnBoardingCollectionViewCell.swift */; };
 		216ACF7829C0BDF400B61044 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ACF7729C0BDF400B61044 /* OnBoardingSlide.swift */; };
 		218DFE2E29C0A1A7001C6BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DFE2D29C0A1A7001C6BB5 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		214A40B529C4F7F400F6C7BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		216ACF7529C0BDA600B61044 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		216ACF7729C0BDF400B61044 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
 		218DFE2A29C0A1A7001C6BB5 /* Food Ordering App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Ordering App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214A40B429C4F7C900F6C7BF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				214A40B529C4F7F400F6C7BF /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		218DFE2129C0A1A7001C6BB5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		218DFE4229C0AD67001C6BB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				214A40B429C4F7C900F6C7BF /* Home */,
 				218DFE4429C0AD75001C6BB5 /* OnBoarding */,
 			);
 			path = Views;
@@ -192,6 +203,7 @@
 				218DFE4929C0B145001C6BB5 /* UIView+Extension.swift in Sources */,
 				216ACF7629C0BDA600B61044 /* OnBoardingCollectionViewCell.swift in Sources */,
 				216ACF7829C0BDF400B61044 /* OnBoardingSlide.swift in Sources */,
+				214A40B629C4F7F400F6C7BF /* HomeViewController.swift in Sources */,
 				218DFE4629C0ADA8001C6BB5 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
