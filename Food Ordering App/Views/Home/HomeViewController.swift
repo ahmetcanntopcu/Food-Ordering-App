@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var popularDishesCollectionView: UICollectionView!
     
     var categories: [DishCategory] = [
         
@@ -22,11 +23,19 @@ class HomeViewController: UIViewController {
     
     ]
     
+    var popularDishes: [Dish] =  [
+        
+        .init(id: "id1", name: "Pizza", image: "https://picsum.photos/100/200", description: "The best thing i have ever eaten", calories: 384),
+        .init(id: "id2", name: "Hamburger", image: "https://picsum.photos/100/200", description: "The best thing i have ever eaten", calories: 94),
+        .init(id: "id3", name: "Chicken", image: "https://picsum.photos/100/200", description: "The best thing i have ever eaten", calories: 1014),
+        .init(id: "id4", name: "Meat", image: "https://picsum.photos/100/200", description: "The best thing i have ever eaten", calories: 190)
+    
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryCollectionView.dataSource = self
-        categoryCollectionView.delegate = self
+        
         
         registerCells()
         
@@ -35,6 +44,8 @@ class HomeViewController: UIViewController {
     
     private func registerCells() {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        
+        popularDishesCollectionView.register(UINib(nibName: DishCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishCollectionViewCell.identifier)
     }
     
 
@@ -44,13 +55,33 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        
+        switch collectionView {
+        case categoryCollectionView:
+            return categories.count
+        case popularDishesCollectionView:
+            return popularDishes.count
+        default: return 0
+            
+        }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as! CategoryCollectionViewCell
-        cell.setup(category: categories[indexPath.row])
         
-        return cell
+        switch collectionView {
+        case categoryCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as! CategoryCollectionViewCell
+            cell.setup(category: categories[indexPath.row])
+            
+            return cell
+        case popularDishesCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishCollectionViewCell.identifier, for: indexPath) as! DishCollectionViewCell
+            cell.setup(dish: popularDishes[indexPath.row])
+            
+            return cell
+        default: return UICollectionViewCell()
+            
+        }
+        
     }
     
 }
