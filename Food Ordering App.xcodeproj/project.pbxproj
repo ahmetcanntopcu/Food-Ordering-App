@@ -28,6 +28,7 @@
 		21E2A04C29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2A04A29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift */; };
 		21E2A04D29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E2A04B29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib */; };
 		21E2A05029C7342900801A37 /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2A04F29C7342900801A37 /* DishDetailViewController.swift */; };
+		21E2A05229C7494E00801A37 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2A05129C7494E00801A37 /* UIViewController+Extension.swift */; };
 		467D896E56344DB8E186147A /* Pods_Food_Ordering_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A2E2431CBD63CAB9D57356 /* Pods_Food_Ordering_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		21E2A04A29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		21E2A04B29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		21E2A04F29C7342900801A37 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
+		21E2A05129C7494E00801A37 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		262A26B821CF86AF675037DF /* Pods-Food Ordering App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Ordering App.release.xcconfig"; path = "Target Support Files/Pods-Food Ordering App/Pods-Food Ordering App.release.xcconfig"; sourceTree = "<group>"; };
 		4D0579AC5381430D565DE8A1 /* Pods-Food Ordering App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Ordering App.debug.xcconfig"; path = "Target Support Files/Pods-Food Ordering App/Pods-Food Ordering App.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A2E2431CBD63CAB9D57356 /* Pods_Food_Ordering_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Ordering_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 			children = (
 				218DFE4829C0B145001C6BB5 /* UIView+Extension.swift */,
 				21C0A0F429C5D8F600C86FE4 /* String+Extension.swift */,
+				21E2A05129C7494E00801A37 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E2A05229C7494E00801A37 /* UIViewController+Extension.swift in Sources */,
 				21C0A0F029C5D47700C86FE4 /* CategoryCollectionViewCell.swift in Sources */,
 				218DFE2E29C0A1A7001C6BB5 /* AppDelegate.swift in Sources */,
 				218DFE3029C0A1A7001C6BB5 /* SceneDelegate.swift in Sources */,
