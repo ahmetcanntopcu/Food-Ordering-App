@@ -25,6 +25,8 @@
 		21C0A0FD29C5FE8A00C86FE4 /* DishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0A0FB29C5FE8A00C86FE4 /* DishCollectionViewCell.swift */; };
 		21C0A0FE29C5FE8A00C86FE4 /* DishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C0A0FC29C5FE8A00C86FE4 /* DishCollectionViewCell.xib */; };
 		21C0A10029C6059E00C86FE4 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0A0FF29C6059E00C86FE4 /* Dish.swift */; };
+		21E2A04C29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2A04A29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift */; };
+		21E2A04D29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E2A04B29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib */; };
 		467D896E56344DB8E186147A /* Pods_Food_Ordering_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A2E2431CBD63CAB9D57356 /* Pods_Food_Ordering_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		21C0A0FB29C5FE8A00C86FE4 /* DishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCollectionViewCell.swift; sourceTree = "<group>"; };
 		21C0A0FC29C5FE8A00C86FE4 /* DishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCollectionViewCell.xib; sourceTree = "<group>"; };
 		21C0A0FF29C6059E00C86FE4 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		21E2A04A29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		21E2A04B29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		262A26B821CF86AF675037DF /* Pods-Food Ordering App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Ordering App.release.xcconfig"; path = "Target Support Files/Pods-Food Ordering App/Pods-Food Ordering App.release.xcconfig"; sourceTree = "<group>"; };
 		4D0579AC5381430D565DE8A1 /* Pods-Food Ordering App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Ordering App.debug.xcconfig"; path = "Target Support Files/Pods-Food Ordering App/Pods-Food Ordering App.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A2E2431CBD63CAB9D57356 /* Pods_Food_Ordering_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Ordering_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,7 @@
 		21C0A0EC29C5D43600C86FE4 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				21E2A04929C71FCF00801A37 /* DishLandscapeCollectionViewCell */,
 				21C0A0FA29C5FE6000C86FE4 /* DishCollectionViewCell */,
 				21C0A0ED29C5D44B00C86FE4 /* CategoryCollectionViewCell */,
 			);
@@ -188,6 +193,15 @@
 				21C0A0FC29C5FE8A00C86FE4 /* DishCollectionViewCell.xib */,
 			);
 			path = DishCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		21E2A04929C71FCF00801A37 /* DishLandscapeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				21E2A04A29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift */,
+				21E2A04B29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib */,
+			);
+			path = DishLandscapeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		6D2800DA219DD4F2CCDDEDA8 /* Pods */ = {
@@ -271,6 +285,7 @@
 				218DFE3A29C0A1A9001C6BB5 /* LaunchScreen.storyboard in Resources */,
 				218DFE3729C0A1A9001C6BB5 /* Assets.xcassets in Resources */,
 				218DFE3529C0A1A7001C6BB5 /* Main.storyboard in Resources */,
+				21E2A04D29C71FFD00801A37 /* DishLandscapeCollectionViewCell.xib in Resources */,
 				21C0A0FE29C5FE8A00C86FE4 /* DishCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +347,7 @@
 				216ACF7829C0BDF400B61044 /* OnBoardingSlide.swift in Sources */,
 				214A40B629C4F7F400F6C7BF /* HomeViewController.swift in Sources */,
 				21C0A0F329C5D6C000C86FE4 /* DishCategory.swift in Sources */,
+				21E2A04C29C71FFD00801A37 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				21C0A0F529C5D8F600C86FE4 /* String+Extension.swift in Sources */,
 				21C0A0F929C5E40700C86FE4 /* CardView.swift in Sources */,
 				21C0A0FD29C5FE8A00C86FE4 /* DishCollectionViewCell.swift in Sources */,

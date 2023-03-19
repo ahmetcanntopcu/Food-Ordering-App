@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularDishesCollectionView: UICollectionView!
+    @IBOutlet weak var specialsCollectionView: UICollectionView!
     
     var categories: [DishCategory] = [
         
@@ -32,13 +33,17 @@ class HomeViewController: UIViewController {
     
     ]
     
+    var specials: [Dish] = [
+        
+        .init(id: "id1", name: "Duck", image: "https://picsum.photos/100/200", description: "This is the my favourite dish", calories: 268),
+        .init(id: "id2", name: "Steak", image: "https://picsum.photos/100/200", description: "The best thing i have ever tasted", calories: 416),
+    
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         registerCells()
-        
 
     }
     
@@ -46,10 +51,11 @@ class HomeViewController: UIViewController {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         
         popularDishesCollectionView.register(UINib(nibName: DishCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishCollectionViewCell.identifier)
+        
+        specialsCollectionView.register(UINib(nibName: DishLandscapeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishLandscapeCollectionViewCell.identifier)
     }
     
-
-
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -61,6 +67,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return categories.count
         case popularDishesCollectionView:
             return popularDishes.count
+        case specialsCollectionView:
+            return specials.count
         default: return 0
             
         }
@@ -76,6 +84,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularDishesCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishCollectionViewCell.identifier, for: indexPath) as! DishCollectionViewCell
             cell.setup(dish: popularDishes[indexPath.row])
+            
+            return cell
+        case specialsCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishLandscapeCollectionViewCell.identifier, for: indexPath) as! DishLandscapeCollectionViewCell
+            cell.setup(dish: specials[indexPath.row])
             
             return cell
         default: return UICollectionViewCell()
