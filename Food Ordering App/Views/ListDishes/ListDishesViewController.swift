@@ -24,6 +24,9 @@ class ListDishesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listDishesTableView.delegate = self
+        listDishesTableView.dataSource = self
+        
         title = category.name
         
         registerCells()

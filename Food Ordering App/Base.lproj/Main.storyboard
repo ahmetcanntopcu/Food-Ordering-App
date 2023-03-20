@@ -137,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="49" y="-40"/>
         </scene>
-        <!--Yummie-->
+        <!-- -->
         <scene sceneID="m6j-Wu-SYr">
             <objects>
                 <viewController id="Qxj-7O-DWq" customClass="HomeViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -327,9 +327,12 @@
                             <constraint firstItem="7yG-Dv-V8J" firstAttribute="trailing" secondItem="tnQ-Wb-Hu5" secondAttribute="trailing" id="UT7-oZ-iqE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yummie" id="SAD-se-FT0">
+                    <navigationItem key="navigationItem" title=" " id="SAD-se-FT0">
                         <barButtonItem key="rightBarButtonItem" image="cart.circle" catalog="system" id="h5K-xc-4TM">
                             <color key="tintColor" red="0.87316768690000002" green="0.071139672330000001" blue="0.15200709379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="0v8-ba-OUY" kind="show" id="9Mr-Ek-Bz2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -341,6 +344,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khm-v2-1rP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="-48.214285714285715"/>
+        </scene>
+        <!--List Orders View Controller-->
+        <scene sceneID="Png-el-8FL">
+            <objects>
+                <viewController storyboardIdentifier="ListOrdersViewController" id="0v8-ba-OUY" customClass="ListOrdersViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H9Q-t9-CPy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NHY-Gc-Kcb">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0v8-ba-OUY" id="Qdq-zH-OhH"/>
+                                    <outlet property="delegate" destination="0v8-ba-OUY" id="EXw-op-zPc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="moj-FT-wwI"/>
+                        <color key="backgroundColor" red="0.97928707169999996" green="0.97928707169999996" blue="0.97928707169999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NHY-Gc-Kcb" firstAttribute="top" secondItem="moj-FT-wwI" secondAttribute="top" id="0Ch-vK-5ZX"/>
+                            <constraint firstItem="NHY-Gc-Kcb" firstAttribute="leading" secondItem="moj-FT-wwI" secondAttribute="leading" id="FNC-hJ-8Cl"/>
+                            <constraint firstItem="moj-FT-wwI" firstAttribute="bottom" secondItem="NHY-Gc-Kcb" secondAttribute="bottom" id="TGa-0H-FsY"/>
+                            <constraint firstItem="moj-FT-wwI" firstAttribute="trailing" secondItem="NHY-Gc-Kcb" secondAttribute="trailing" id="n9j-mW-ifU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RKB-n7-j9g"/>
+                    <connections>
+                        <outlet property="ordersTableView" destination="NHY-Gc-Kcb" id="Tql-bb-az0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zy-Yl-QxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="632.8125"/>
         </scene>
         <!--Dish Detail View Controller-->
         <scene sceneID="Nsz-0p-ZTh">
