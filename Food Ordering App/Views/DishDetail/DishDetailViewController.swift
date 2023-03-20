@@ -24,6 +24,7 @@ class DishDetailViewController: UIViewController {
     }
     
     private func populateView() {
+        
         dishImageView.kf.setImage(with: dish.image?.asURL)
         dishTitleLbl.text = dish.name
         dishCaloriesLbl.text = dish.formattedCalories

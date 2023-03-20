@@ -443,6 +443,40 @@
             </objects>
             <point key="canvasLocation" x="2667" y="-48"/>
         </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="rhW-PF-DtV">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="YOm-v6-Ww5" customClass="ListDishesViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YEP-QI-f3y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cdB-bA-aBL">
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <color key="backgroundColor" red="0.97928707169999996" green="0.97928707169999996" blue="0.97928707169999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YOm-v6-Ww5" id="i3h-au-sHV"/>
+                                    <outlet property="delegate" destination="YOm-v6-Ww5" id="QJg-P1-Eso"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JlX-eH-6zg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cdB-bA-aBL" firstAttribute="top" secondItem="JlX-eH-6zg" secondAttribute="top" id="5aR-Wm-OmU"/>
+                            <constraint firstItem="cdB-bA-aBL" firstAttribute="trailing" secondItem="JlX-eH-6zg" secondAttribute="trailing" id="LZ9-h6-tAB"/>
+                            <constraint firstItem="cdB-bA-aBL" firstAttribute="leading" secondItem="JlX-eH-6zg" secondAttribute="leading" id="VCV-z8-uUn"/>
+                            <constraint firstAttribute="bottom" secondItem="cdB-bA-aBL" secondAttribute="bottom" id="cKU-zA-6uI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listDishesTableView" destination="cdB-bA-aBL" id="cEd-IR-r18"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZu-qx-wOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3447.826086956522" y="-40.178571428571423"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FpC-hm-Elj">
             <objects>
